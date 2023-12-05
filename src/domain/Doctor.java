@@ -19,12 +19,7 @@ public class Doctor implements Identifiable<Integer>, Serializable {
 
     @Override
     public String toString() {
-        return "Doctor{id=" + id +
-                ", name='" + name + '\'' +
-                ", specialty='" + specialty + '\'' +
-                ", location='" + location + '\'' +
-                ", grade=" + grade +
-                '}';
+        return id + " " + name + " " + specialty + " " + location + " " + grade;
     }
 
     public String getName() {
