@@ -72,7 +72,7 @@
             <TextField fx:id="specialtyTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="locationTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="gradeTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Button fx:id="addButton" mnemonicParsing="false" text="Add" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Button fx:id="addButton" mnemonicParsing="false" onMouseClicked="#onAddButtonClicked" text="Add" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
             <Button fx:id="removeButton" mnemonicParsing="false" text="Remove" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
          </children>
       </GridPane>

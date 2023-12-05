@@ -88,4 +88,25 @@ public class DoctorsController {
             gradeTextField.setText(String.valueOf(d.getGrade()));
         }
     }
+
+    @FXML
+    void onAddButtonClicked(MouseEvent event) {
+        // !!! check whether all fields have values
+
+        try {
+            Integer id = Integer.parseInt(idTextField.getText());
+            double grade = Double.parseDouble(gradeTextField.getText());
+
+            service.addDoctor(id, nameTextField.getText(), specialtyTextField.getText(),
+                    locationTextField.getText(), grade);
+            populateList();
+        }
+        catch (NumberFormatException e)
+        {
+            Alert dialog = new Alert(Alert.AlertType.ERROR);
+            dialog.setTitle("Error");
+            dialog.setContentText("Id and grade must be numbers!");
+            dialog.show();
+        }
+    }
 }
