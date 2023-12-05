@@ -39,16 +39,16 @@ public class Doctor implements Identifiable<Integer>, Serializable {
     }
 
     @Override
-    public boolean equals(Object o)
-    {
-        if (this == o)
-            return true;
-        if (o.getClass() != Doctor.class)
-            return false;
-        Doctor d = (Doctor)o;
-        if (d.id == this.id)
-            return true;
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Doctor doctor = (Doctor) o;
+        return Objects.equals(id, doctor.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
     @Override
